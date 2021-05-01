@@ -1,21 +1,27 @@
 import { useState } from 'react';
 import './App.css';
-import data from './data.json'
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HomeScreen from './Screen/HomeScreen';
+
 
 function App() {
-  const [products, setProducts] = useState(data)
-  console.log(data);
-  console.log(products[0]);
-  console.log(products[1]);
-  console.log(products[2]);
-  console.log(products[3]);
-  console.log(products[4]);
-  console.log(products[5]);
-  console.log(products[6]);
+
+
+
   return (
-    <div className="App">
-     
-    </div>
+    <>
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route path='/' exact component={HomeScreen}></Route>
+        <Route path='/'></Route>
+        <Route path='/'></Route>
+        <Route path='/'></Route>
+      </Switch>
+
+    </Router>
+    </>
   );
 }
 
