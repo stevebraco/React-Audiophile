@@ -8,15 +8,15 @@ export default function Categories() {
         <div className="categories__container container dp-flex">
       <CategorieCard
         title={'headphones'}
-        img={"./assets/shared/desktop/image-headphones.png"}
+        img={`${process.env.PUBLIC_URL}/assets/shared/desktop/image-headphones.png`}
       />
       <CategorieCard
         title={'speakers'}
-        img={"./assets/shared/desktop/image-speakers.png"}
+        img={`${process.env.PUBLIC_URL}/assets/shared/desktop/image-speakers.png`}
       />
       <CategorieCard
         title={'earphones'}
-        img={"./assets/shared/desktop/image-earphones.png"}
+        img={`${process.env.PUBLIC_URL}/assets/shared/desktop/image-earphones.png`}
       />
       </div>
     </section>

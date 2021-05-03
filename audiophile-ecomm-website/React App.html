@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/product/4 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap);</style><style>html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 44px;
+  letter-spacing: 1.4px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+}
+
+h4 {
+  font-size: 2.8rem;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-size: 2.4rem;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+
+h6 {
+  font-size: 1.8rem;
+  line-height: 25px;
+  letter-spacing: 1.2px;
+}
+
+small {
+  color: #d87d4a;
+  font-size: 1.3rem;
+  line-height: 25px;
+  letter-spacing: 0.9px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.l-spacing {
+  letter-spacing: 10px;
+}
+
+.black-op {
+  color: black;
+  opacity: 0.5;
+}
+
+.new-product {
+  opacity: 0.4;
+  color: white;
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.background-nav {
+  height: 9.6rem;
+  background: black;
+  margin-bottom: 7.9rem;
+}
+
+.header {
+  background: black;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.dp-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.go-back {
+  display: block;
+  margin-top: 7.9rem;
+  margin-bottom: 5.6rem;
+}
+
+.big-title {
+  background: black;
+  color: white;
+  padding-top: 9.8rem;
+  padding-bottom: 9.7rem;
+  text-align: center;
+  margin-bottom: 16rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  transition: 0.5s;
+}
+
+.btn-primary {
+  background: #d87d4a;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #fbaf85;
+}
+
+.btn-black {
+  background: black;
+  color: white;
+}
+.btn-black:hover {
+  background: #4c4c4c;
+}
+
+.btn-outline {
+  color: black;
+  border: 1px solid black;
+}
+.btn-outline:hover {
+  background: black;
+  color: white;
+}
+
+.btn-shop span {
+  color: black;
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 1.3rem;
+}
+
+.c-primary {
+  color: #d87d4a;
+}
+
+.navbar {
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  justify-content: space-between;
+  align-content: center;
+  height: 9.6rem;
+}
+.navbar__logo {
+  margin-right: 16.5rem;
+}
+.navbar__menu {
+  grid-gap: 3.2rem;
+  gap: 3.2rem;
+}
+.navbar__link {
+  color: white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.navbar__link:hover {
+  color: #d87d4a;
+}
+
+.home {
+  background: #191919;
+  margin-bottom: 12rem;
+}
+.home__container {
+  color: white;
+  background: url(/static/media/image-hero.55c18e98.jpg) no-repeat;
+  background-position: 50% -10rem;
+}
+.home__description-headphones {
+  max-width: 41.9rem;
+  padding-top: 12.8rem;
+  padding-bottom: 15.8rem;
+}
+.home__title {
+  padding-bottom: 2.4rem;
+}
+.home__text {
+  max-width: 34.9rem;
+  padding-bottom: 4rem;
+}
+
+.categories__container {
+  justify-content: space-between;
+  grid-gap: 3rem;
+  gap: 3rem;
+  padding-bottom: 19.5rem;
+}
+
+.categorie {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1;
+  text-align: center;
+  z-index: 1;
+}
+.categorie:after {
+  content: "";
+  background: #f1f1f1;
+  position: absolute;
+  height: 204px;
+  bottom: -3rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.categorie__figure {
+  width: 220px;
+  margin: 0 auto;
+  transform: translateY(32px);
+}
+.categorie__title {
+  padding-bottom: 1.6rem;
+}
+
+.speaker-zx9 {
+  position: relative;
+  justify-content: space-between;
+  padding-left: 11.7rem;
+  padding-right: 9.5rem;
+  background-color: #d87d4a;
+  color: white;
+  overflow: hidden;
+  border-radius: 8px;
+  background-image: url(/static/media/pattern-circles.f4df3610.svg);
+  background-repeat: no-repeat;
+  background-position: -15rem -4rem;
+  margin-bottom: 4.8rem;
+}
+.speaker-zx9__description {
+  max-width: 34.9rem;
+  margin-left: auto;
+  padding-bottom: 12.4rem;
+  padding-top: 13.3rem;
+}
+.speaker-zx9__title {
+  padding-bottom: 2.4rem;
+}
+.speaker-zx9__text {
+  padding-bottom: 4rem;
+}
+.speaker-zx9__img {
+  width: 410px;
+  height: 493px;
+  position: absolute;
+  top: 9rem;
+  left: 10%;
+}
+
+.speaker-zx7 {
+  background: url(/static/media/image-speaker-zx7.3d4940e8.jpg) no-repeat;
+  border-radius: 8px;
+  margin-bottom: 4.8rem;
+}
+.speaker-zx7__description {
+  padding: 10.1rem 9.5rem;
+}
+.speaker-zx7__title {
+  padding-bottom: 3.2rem;
+}
+
+.earphones-yx1 {
+  justify-content: space-between;
+  grid-gap: 3rem;
+  gap: 3rem;
+  margin-bottom: 20rem;
+}
+.earphones-yx1__img {
+  border-radius: 8px;
+}
+.earphones-yx1__title {
+  padding-bottom: 2.4rem;
+}
+.earphones-yx1__description {
+  flex: 1 1;
+  border-radius: 8px;
+  padding: 10.1rem 9.5rem;
+  background: #f1f1f1;
+}
+
+.bringing {
+  margin-bottom: 16rem;
+}
+.bringing__container {
+  justify-content: space-between;
+  align-items: center;
+}
+.bringing__description {
+  max-width: 44.5rem;
+}
+.bringing__title {
+  padding-bottom: 3.2rem;
+}
+
+.footer {
+  background-color: #101010;
+  padding-top: 7.5rem;
+  padding-bottom: 4.8rem;
+}
+.footer__nav {
+  justify-content: space-between;
+  padding-bottom: 3.6rem;
+}
+.footer__content {
+  justify-content: space-between;
+  padding-bottom: 5.6rem;
+}
+.footer__text {
+  color: white;
+  opacity: 0.5;
+  max-width: 54rem;
+}
+.footer__social {
+  align-items: flex-end;
+  grid-gap: 1.6rem;
+  gap: 1.6rem;
+}
+.footer__copy {
+  color: white;
+  opacity: 0.5;
+}
+
+.card {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rem;
+}
+.card__new-product {
+  color: #d87d4a;
+  text-transform: uppercase;
+  padding-bottom: 1.6rem;
+}
+.card__title {
+  padding-bottom: 3.2rem;
+}
+.card__description {
+  padding-bottom: 4rem;
+}
+.card__content {
+  max-width: 44.5rem;
+}
+.card__img {
+  width: 540px;
+}
+.card__description-details {
+  padding-bottom: 3.2rem;
+}
+.card__price-details {
+  padding-bottom: 4.7rem;
+}
+.card__wrapper-input {
+  max-width: 12rem;
+  position: relative;
+  margin-right: 1.6rem;
+}
+.card__input-details {
+  outline: none;
+  background-color: #f1f1f1;
+  border: none;
+  text-align: center;
+  padding: 1.5rem 0;
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.card__plus-details, .card__minus-details {
+  position: absolute;
+  border: none;
+  font-size: 1.3rem;
+}
+.card__plus-details {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-right: 2rem;
+}
+.card__minus-details {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-left: 2rem;
+}
+
+.card-features {
+  margin-bottom: 16rem;
+}
+.card-features__container {
+  justify-content: space-between;
+}
+.card-features__description {
+  max-width: 63rem;
+}
+.card-features__title {
+  padding-bottom: 3.2rem;
+}
+.card-features__list {
+  color: black;
+  opacity: 0.5;
+}
+.card-features__item {
+  margin-left: 2.4rem;
+}
+.card-features__description-box {
+  width: 35rem;
+}
+
+.gallery {
+  margin-bottom: 16rem;
+}
+.gallery__container, .gallery__two-gallery {
+  justify-content: space-between;
+}
+.gallery__img {
+  border-radius: 8px;
+}
+
+.also-like {
+  margin-bottom: 16rem;
+}
+.also-like__heading {
+  padding-bottom: 6.4rem;
+  text-align: center;
+}
+.also-like__img {
+  padding-bottom: 4rem;
+}
+.also-like__title {
+  padding-bottom: 3.2rem;
+}
+.also-like__container {
+  text-align: center;
+  grid-gap: 3rem;
+  gap: 3rem;
+}
+.also-like__card {
+  flex: 1 1;
+}
+
+.cart {
+  position: absolute;
+  padding: 3.1rem;
+  top: 15%;
+  right: 10em;
+  width: 377px;
+  background-color: white;
+  border-radius: 8px;
+}
+.cart__img {
+  width: 64px;
+  height: 64px;
+}
+
+/*# sourceMappingURL=index.css.map */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc2Fzcy9yZXNldC5zY3NzIiwid2VicGFjazovL3NyYy9pbmRleC5jc3MiLCJ3ZWJwYWNrOi8vc3JjL3Nhc3MvaW5kZXguc2NzcyIsIndlYnBhY2s6Ly9zcmMvc2Fzcy92YXJpYWJsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUF5RyxTQUFBO0VBQVMsVUFBQTtBQ0lsSDs7QURKNEg7RUFBa0IsZUFBQTtFQUFlLG1CQUFBO0FDUzdKOztBRFRnTDtFQUFHLGdCQUFBO0FDYW5MOztBRGJtTTtFQUFvQixTQUFBO0FDaUJ2Tjs7QURqQmdPO0VBQUssc0JBQUE7RUFBc0IsdUJBQUE7RUFBdUIsZ0JBQUE7QUN1QmxSOztBRHZCbVM7RUFBcUIsbUJBQUE7QUMyQnhUOztBRDNCMlU7RUFBVSxZQUFBO0VBQVksZUFBQTtBQ2dDalc7O0FEaENnWDtFQUFPLFNBQUE7QUNvQ3ZYOztBRHBDZ1k7RUFBTSx5QkFBQTtFQUF5QixpQkFBQTtBQ3lDL1o7O0FEekNnYjtFQUFNLFVBQUE7QUM2Q3RiOztBQ3pDQTtFQUNFLGtDQ1FPO0VEUFAsZUFBQTtFQUNBLGdCQ1VPO0VEVFAsaUJBQUE7RUFDQSx5QkNKVztBRmdEYjs7QUN6Q0E7Ozs7Ozs7RUFPRSxnQkNISztFRElMLHlCQUFBO0FENENGOztBQ3pDQTtFQUNFLGlCQUFBO0VBQ0EsaUJBQUE7RUFDQSxtQkFBQTtBRDRDRjs7QUN6Q0E7RUFDRSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxxQkFBQTtBRDRDRjs7QUN6Q0E7RUFDRSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxzQkFBQTtBRDRDRjs7QUN6Q0E7RUFDRSxpQkFBQTtFQUNBLGlCQUFBO0VBQ0EsbUJBQUE7QUQ0Q0Y7O0FDekNBO0VBQ0UsaUJBQUE7RUFDQSxpQkFBQTtFQUNBLHFCQUFBO0FENENGOztBQ3pDQTtFQUNFLGlCQUFBO0VBQ0EsaUJBQUE7RUFDQSxxQkFBQTtBRDRDRjs7QUN6Q0E7RUFDRSxjQzFEUTtFRDJEUixpQkFB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 */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><header class="header"><nav class="navbar container dp-flex"><div class="navbar__menu dp-flex"><img class="navbar__logo" src="./React App_files/logo.svg" alt="logo"><a class="navbar__link" href="http://localhost:3000/">home</a><a class="navbar__link" href="http://localhost:3000/headphones">headphones</a><a class="navbar__link" href="http://localhost:3000/speakers">speakers</a><a class="navbar__link" href="http://localhost:3000/earphones">earphones</a></div><button><img src="./React App_files/icon-cart.svg" alt="cart"></button></nav></header><div class="container"><a href="http://localhost:3000/headphones"><span class="go-back black-op"> Go Back </span></a><div class="card dp-flex" style="display: flex; flex-direction: row;"><img class="card__img" src="./React App_files/image-product.jpg" alt="XX99 Mark II Headphones"><div class="card__content"><p class="card__new-product l-spacing">new product</p><h2 class="card__title">XX99 Mark II Headphones</h2><p class="card__description-details black-op ">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p><h6 class="card__price-details">$2999</h6><div class="dp-flex"><div class="card__wrapper-input"><input class="card__input-details" type="text" value="1"><button class="card__plus-details black-op">+</button><button class="card__minus-details black-op">-</button></div><button class="btn btn-primary">add to cart</button></div></div></div><div class="card-features"><div class="card-features__container dp-flex "><div class="card-features__description"><h3 class="card-features__title">features</h3><p class="card-features__text black-op">Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.
+
+The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and a modern design aesthetic.</p></div><div class="card-features__description-box"><h3 class="card-features__title">in the box</h3><ul><li><strong class="c-primary">1x</strong><span class="card-features__item black-op">Headphone unit</span> </li><li><strong class="c-primary">2x</strong><span class="card-features__item black-op">Replacement earcups</span> </li><li><strong class="c-primary">1x</strong><span class="card-features__item black-op">User manual</span> </li><li><strong class="c-primary">1x</strong><span class="card-features__item black-op">3.5mm 5m audio cable</span> </li><li><strong class="c-primary">1x</strong><span class="card-features__item black-op">Travel bag</span> </li></ul></div></div></div><div class="gallery"><div class="gallery__container dp-flex"><div class="gallery__two-gallery dp-flex fd-column"><img class="gallery__img" src="./React App_files/image-gallery-1.jpg" alt=""><img class="gallery__img" src="./React App_files/image-gallery-2.jpg" alt=""></div><img class="gallery__img" src="./React App_files/image-gallery-3.jpg" alt=""></div></div><div class="also-like"><h3 class="also-like__heading">you may also like</h3><div class="also-like__container dp-flex"><div class="also-like__card"><img class="also-like__img" src="./React App_files/image-xx99-mark-one-headphones.jpg" alt="xx99-mark-one-headphones"><h5 class="also-like__title"> XX99 Mark I </h5><a class="btn btn-primary" href="http://localhost:3000/product/4"> see product</a></div><div class="also-like__card"><img class="also-like__img" src="./React App_files/image-xx59-headphones.jpg" alt="xx59-headphones"><h5 class="also-like__title"> XX59 </h5><a class="btn btn-primary" href="http://localhost:3000/product/4"> see product</a></div><div class="also-like__card"><img class="also-like__img" src="./React App_files/image-zx9-speaker.jpg" alt="zx9-speaker"><h5 class="also-like__title"> ZX9 Speaker </h5><a class="btn btn-primary" href="http://localhost:3000/product/4"> see product</a></div></div></div><section class=" categories"><div class="categories__container container dp-flex"><div class="categorie"><figure class="categorie__figure"><img class="categorie__img" src="./React App_files/image-headphones.png" alt="headphones"></figure><h6 class="categorie__title">headphones</h6><a class="btn-shop" href="http://localhost:3000/product/4"><span>shop</span><img src="./React App_files/icon-arrow-right.svg" alt="chevron-right"></a></div><div class="categorie"><figure class="categorie__figure"><img class="categorie__img" src="./React App_files/image-speakers.png" alt="speakers"></figure><h6 class="categorie__title">speakers</h6><a class="btn-shop" href="http://localhost:3000/product/4"><span>shop</span><img src="./React App_files/icon-arrow-right.svg" alt="chevron-right"></a></div><div class="categorie"><figure class="categorie__figure"><img class="categorie__img" src="./React App_files/image-earphones.png" alt="earphones"></figure><h6 class="categorie__title">earphones</h6><a class="btn-shop" href="http://localhost:3000/product/4"><span>shop</span><img src="./React App_files/icon-arrow-right.svg" alt="chevron-right"></a></div></div></section></div><section class="bringing container"><div class="bringing__container dp-flex"><div class="bringing__description"><h2 class="bringing__title">Bringing you the <span class="c-primary">best</span> audio gear</h2><p class="bringing__text black-op">Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.</p></div><img src="./React App_files/image-best-gear.jpg" alt="" srcset=""></div></section><footer class="footer"><div class="container"><nav class=" footer__nav dp-flex"><img class="navbar__logo" src="./React App_files/logo.svg" alt="logo"><div class="navbar__menu dp-flex"><a class="navbar__link" href="http://localhost:3000/">home</a><a class="navbar__link" href="http://localhost:3000/headphones">headphones</a><a class="navbar__link" href="http://localhost:3000/speakers">speakers</a><a class="navbar__link" href="http://localhost:3000/earphones">earphones</a></div></nav><div class="footer__content dp-flex"><p class="footer__text">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p><div class="footer__social dp-flex"><img src="./React App_files/icon-facebook.svg" alt="facebook"><img src="./React App_files/icon-twitter.svg" alt="twitter"><img src="./React App_files/icon-instagram.svg" alt="instagram"></div></div><div class="footer__copy">Copyright 2021. All Rights Reserved</div></div></footer></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js.téléchargement"></script><script src="./React App_files/vendors_main.chunk.js.téléchargement"></script><script src="./React App_files/main.chunk.js.téléchargement"></script>
+
+<iframe style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; border: none; z-index: 2147483647;" src="./React App_files/saved_resource.html"></iframe></body></html>

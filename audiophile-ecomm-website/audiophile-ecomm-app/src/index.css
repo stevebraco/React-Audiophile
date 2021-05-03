@@ -113,10 +113,17 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  background: transparent;
 }
 
 .l-spacing {
   letter-spacing: 10px;
+}
+
+.black-op {
+  color: black;
+  opacity: 0.5;
 }
 
 .new-product {
@@ -129,11 +136,14 @@ button {
   text-transform: uppercase;
 }
 
+.background-nav {
+  height: 9.6rem;
+  background: black;
+  margin-bottom: 7.9rem;
+}
+
 .header {
-  background: transparent;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  background: black;
 }
 
 .container {
@@ -147,10 +157,20 @@ button {
   flex-wrap: wrap;
 }
 
+.fd-column {
+  flex-direction: column;
+}
+
+.go-back {
+  display: block;
+  margin-top: 7.9rem;
+  margin-bottom: 5.6rem;
+}
+
 .big-title {
   background: black;
   color: white;
-  padding-top: 19.5rem;
+  padding-top: 9.8rem;
   padding-bottom: 9.7rem;
   text-align: center;
   margin-bottom: 16rem;
@@ -229,7 +249,6 @@ button {
 
 .home {
   background: #191919;
-  padding-top: 9rem;
   margin-bottom: 12rem;
 }
 .home__container {
@@ -435,8 +454,6 @@ button {
 .card__plus-details, .card__minus-details {
   position: absolute;
   border: none;
-  color: black;
-  opacity: 0.25;
   font-size: 1.3rem;
 }
 .card__plus-details {
@@ -452,15 +469,14 @@ button {
   padding-left: 2rem;
 }
 
+.card-features {
+  margin-bottom: 16rem;
+}
 .card-features__container {
   justify-content: space-between;
 }
 .card-features__description {
   max-width: 63rem;
-}
-.card-features__text {
-  color: black;
-  opacity: 0.5;
 }
 .card-features__title {
   padding-bottom: 3.2rem;
@@ -470,10 +486,55 @@ button {
   opacity: 0.5;
 }
 .card-features__item {
-  margin-right: 2.4rem;
+  margin-left: 2.4rem;
 }
 .card-features__description-box {
   width: 35rem;
+}
+
+.gallery {
+  margin-bottom: 16rem;
+}
+.gallery__container, .gallery__two-gallery {
+  justify-content: space-between;
+}
+.gallery__img {
+  border-radius: 8px;
+}
+
+.also-like {
+  margin-bottom: 16rem;
+}
+.also-like__heading {
+  padding-bottom: 6.4rem;
+  text-align: center;
+}
+.also-like__img {
+  padding-bottom: 4rem;
+}
+.also-like__title {
+  padding-bottom: 3.2rem;
+}
+.also-like__container {
+  text-align: center;
+  gap: 3rem;
+}
+.also-like__card {
+  flex: 1 1;
+}
+
+.cart {
+  position: absolute;
+  padding: 3.1rem;
+  top: 15%;
+  right: 10em;
+  width: 377px;
+  background-color: white;
+  border-radius: 8px;
+}
+.cart__img {
+  width: 64px;
+  height: 64px;
 }
 
 /*# sourceMappingURL=index.css.map */

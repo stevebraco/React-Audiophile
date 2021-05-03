@@ -12,7 +12,7 @@ export default function CategorieCard({img, title}) {
         <Link className='btn-shop'>
         <span>shop</span>
         <img
-              src="./assets/shared/desktop/icon-arrow-right.svg"
+              src={`${process.env.PUBLIC_URL}/assets/shared/desktop/icon-arrow-right.svg`}
               alt="chevron-right"
             />
         </Link>

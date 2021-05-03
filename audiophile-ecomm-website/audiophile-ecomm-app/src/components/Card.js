@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Card({ name, id, category, description, image, slug, imgStart, new: newProduct, }) {
-  console.log(newProduct);
   return (
     <div className="card dp-flex container" 
     style={{
@@ -17,7 +16,7 @@ export default function Card({ name, id, category, description, image, slug, img
         ) : null}
 
         <h2 className="card__title">{name}</h2>
-        <p className="card__description">{description}</p>
+        <p className="card__description black-op">{description}</p>
         <Link to={`/product/${id}`} className="btn btn-primary"> see product</Link>
       </div>
     </div>
