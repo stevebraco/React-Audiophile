@@ -67,6 +67,10 @@ small {
 a {
   text-decoration: none;
 }
+
+button {
+  cursor: pointer;
+}
 .l-spacing {
   letter-spacing: 10px;
 
@@ -112,6 +116,7 @@ a {
 //BUTTONS
 .btn {
   display: inline-block;
+  border: none;
   font-size: 1.3rem;
   font-weight: $bold;
   letter-spacing: 1px;
@@ -191,6 +196,7 @@ a {
 .home {
   background: #191919;
   padding-top: 9rem;
+  margin-bottom: 12rem;
   &__container {
     color: $white;
     background: url("./images/home/desktop/image-hero.jpg") no-repeat;
@@ -407,5 +413,92 @@ a {
 
   &__img {
     width: 540px;
+  }
+
+  //product details
+  &__description-details {
+    padding-bottom: 3.2rem;
+  }
+
+  &__price-details {
+    padding-bottom: 4.7rem;
+  }
+
+  &__wrapper-input {
+    max-width: 12rem;
+    position: relative;
+    margin-right: 1.6rem;
+  }
+  
+  &__input-details {
+    outline: none;
+    background-color: $lightGray;
+    border: none;
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    font-family: $fonts;
+    font-size: 1.3rem;
+    font-weight: $bold;
+
+
+  }
+
+  &__plus-details, &__minus-details {
+    position: absolute;
+    border: none;
+    color: $black;
+    opacity: .25;
+    font-size: 1.3rem;
+  }
+
+  &__plus-details {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-right: 2rem;
+  }
+
+  &__minus-details {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 2rem;
+
+  }
+}
+
+.card-features {
+
+  &__container {
+    justify-content: space-between;
+  }
+  
+  &__description {
+    max-width: 63rem;
+
+  }
+  
+
+  &__text {
+    color: $black;
+    opacity: 0.5;
+  }
+
+  &__title {
+    padding-bottom: 3.2rem;
+  }
+
+  &__list {
+    color: $black;
+    opacity: 0.5;
+  }
+  
+  &__item {
+    margin-right: 2.4rem;
+  }
+
+  &__description-box {
+    width: 35rem;
   }
 }

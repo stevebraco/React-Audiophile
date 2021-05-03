@@ -14,7 +14,7 @@ export default function HeadPhonesScreen() {
         <div className='big-title'>
             <h2 className='big-title__title'>headphones</h2>
         </div>
-      <Card {...productOne} newProduct="new product" />
+      <Card {...productOne} />
       <Card {...productTwo} imgStart="start" />
       <Card {...productThree} />
       <Categories/>

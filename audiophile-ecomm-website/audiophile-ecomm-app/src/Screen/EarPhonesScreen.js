@@ -11,7 +11,7 @@ export default function EarPhonesScreen() {
         <div className='big-title'>
             <h2 className='big-title__title'>earphones</h2>
         </div>
-      <Card {...productOne} newProduct="new product" />
+      <Card {...productOne}/>
       <Categories/>
     </div>
   );

@@ -111,6 +111,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .l-spacing {
   letter-spacing: 10px;
 }
@@ -154,6 +158,7 @@ a {
 
 .btn {
   display: inline-block;
+  border: none;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -225,6 +230,7 @@ a {
 .home {
   background: #191919;
   padding-top: 9rem;
+  margin-bottom: 12rem;
 }
 .home__container {
   color: white;
@@ -403,6 +409,71 @@ a {
 }
 .card__img {
   width: 540px;
+}
+.card__description-details {
+  padding-bottom: 3.2rem;
+}
+.card__price-details {
+  padding-bottom: 4.7rem;
+}
+.card__wrapper-input {
+  max-width: 12rem;
+  position: relative;
+  margin-right: 1.6rem;
+}
+.card__input-details {
+  outline: none;
+  background-color: #f1f1f1;
+  border: none;
+  text-align: center;
+  padding: 1.5rem 0;
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.card__plus-details, .card__minus-details {
+  position: absolute;
+  border: none;
+  color: black;
+  opacity: 0.25;
+  font-size: 1.3rem;
+}
+.card__plus-details {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-right: 2rem;
+}
+.card__minus-details {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-left: 2rem;
+}
+
+.card-features__container {
+  justify-content: space-between;
+}
+.card-features__description {
+  max-width: 63rem;
+}
+.card-features__text {
+  color: black;
+  opacity: 0.5;
+}
+.card-features__title {
+  padding-bottom: 3.2rem;
+}
+.card-features__list {
+  color: black;
+  opacity: 0.5;
+}
+.card-features__item {
+  margin-right: 2.4rem;
+}
+.card-features__description-box {
+  width: 35rem;
 }
 
 /*# sourceMappingURL=index.css.map */
