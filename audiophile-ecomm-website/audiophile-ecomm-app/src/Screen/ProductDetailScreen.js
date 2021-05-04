@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../actions/cartActions";
+import BtnGoBack from "../components/BtnGoBack";
 import Categories from "../components/Categories";
 import Data from "../data.json";
 
@@ -61,9 +62,8 @@ export default function ProductDetailScreen(props) {
     <>
       {/* <div className="background-nav"></div> */}
     <div className='container'>
-        <Link  to={`/${category}`}>
-          <span className="go-back black-op"> Go Back </span>
-        </Link>
+    <BtnGoBack/>
+
       <div
         className="card dp-flex"
         style={{

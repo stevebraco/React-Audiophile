@@ -67,11 +67,16 @@ small {
 label {
   text-transform: capitalize;
   display: block;
+  padding-bottom: .9rem;
+}
+.no-capitalize {
+  text-transform: initial;
 }
 input {
   border-radius: 8px;
   padding: 2rem 2.4rem;
   border: 1px solid #CFCFCF;
+  outline-color: $primary;
   
 }
 
@@ -464,11 +469,11 @@ button {
   &__wrapper-input {
     width: 12rem;
     position: relative;
-    margin-right: 1.6rem;
   }
 
   &__wrapper-input--cart {
     width: 9.6rem;
+
     
   }
   
@@ -482,9 +487,9 @@ button {
     font-family: $fonts;
     font-size: 1.3rem;
     font-weight: $bold;
-
-
   }
+
+  
 
   &__plus-details, &__minus-details {
     position: absolute;
@@ -606,6 +611,9 @@ button {
     &__img {
       width: 64px;
       height: 64px;
+      border-radius: 8px;
+      margin-right: 1.6rem;
+
     }
 
     &__remove {
@@ -615,20 +623,103 @@ button {
 }
 
 //CHECKOUTSCREEN
+.checkout-summary {
+  align-items: flex-start;
+}
 .checkout {
   max-width: 730px;
   padding: 5.4rem 4.8rem 4.8rem;
+  background: $white;
+  border-radius: 8px;
+
+  &__title {
+    padding-bottom: 4.1rem;
+  }
+
+  &__small {
+    display: block;
+    padding-bottom: 1.6rem;
+  }
 
   &__form-group {
     display: flex;
     flex-flow: column;
     width: 30.9rem;
+    padding-bottom: 2.4rem;
   }
   &__container-two {
     gap: 1.6rem;
   }
   &__form-group-full {
     display: flex;
-    flex-flow: column;  }
+    flex-flow: column;
+    padding-bottom: 2.4rem;
+
+  }
+
+    &__method {
+      display: flex;
+      align-items: center;
+      gap: 2.1rem;
+      border: 1px solid #CFCFCF;
+      border-radius: 8px;
+      padding: 2rem 2.4rem;
+      width: 30.9rem;
+      margin-bottom: 1.6rem;
+
+    }
+    &__method:focus-within {
+      border: 1px solid $primary;
+    }
 }
 
+.summary {
+  width: 350px;
+  background: $white;
+  border-radius: 8px;
+  padding: 3.2rem 3.3rem;
+
+  &__prices {
+    gap: .8rem;
+  }
+}
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: $lightGray;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #CFCFCF;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: $primary;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #CFCFCF;
+}
+
+//modal checkout
+.modal-checkout {    
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 400px;
+  height: 400px;
+  background: $white;
+  border-radius: 8px;
+
+}

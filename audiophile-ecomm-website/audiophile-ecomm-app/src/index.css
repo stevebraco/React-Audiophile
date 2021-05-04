@@ -110,12 +110,18 @@ small {
 label {
   text-transform: capitalize;
   display: block;
+  padding-bottom: 0.9rem;
+}
+
+.no-capitalize {
+  text-transform: initial;
 }
 
 input {
   border-radius: 8px;
   padding: 2rem 2.4rem;
   border: 1px solid #CFCFCF;
+  outline-color: #d87d4a;
 }
 
 a {
@@ -462,7 +468,6 @@ button {
 .card__wrapper-input {
   width: 12rem;
   position: relative;
-  margin-right: 1.6rem;
 }
 .card__wrapper-input--cart {
   width: 9.6rem;
@@ -573,19 +578,35 @@ button {
 .cart__img {
   width: 64px;
   height: 64px;
+  border-radius: 8px;
+  margin-right: 1.6rem;
 }
 .cart__remove {
   text-decoration: underline rgba(0, 0, 0, 0.2);
 }
 
+.checkout-summary {
+  align-items: flex-start;
+}
+
 .checkout {
   max-width: 730px;
   padding: 5.4rem 4.8rem 4.8rem;
+  background: white;
+  border-radius: 8px;
+}
+.checkout__title {
+  padding-bottom: 4.1rem;
+}
+.checkout__small {
+  display: block;
+  padding-bottom: 1.6rem;
 }
 .checkout__form-group {
   display: flex;
   flex-flow: column;
   width: 30.9rem;
+  padding-bottom: 2.4rem;
 }
 .checkout__container-two {
   gap: 1.6rem;
@@ -593,6 +614,71 @@ button {
 .checkout__form-group-full {
   display: flex;
   flex-flow: column;
+  padding-bottom: 2.4rem;
+}
+.checkout__method {
+  display: flex;
+  align-items: center;
+  gap: 2.1rem;
+  border: 1px solid #CFCFCF;
+  border-radius: 8px;
+  padding: 2rem 2.4rem;
+  width: 30.9rem;
+  margin-bottom: 1.6rem;
+}
+.checkout__method:focus-within {
+  border: 1px solid #d87d4a;
+}
+
+.summary {
+  width: 350px;
+  background: white;
+  border-radius: 8px;
+  padding: 3.2rem 3.3rem;
+}
+.summary__prices {
+  gap: 0.8rem;
+}
+
+input[type=radio]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #f1f1f1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #CFCFCF;
+}
+
+input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d87d4a;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #CFCFCF;
+}
+
+.modal-checkout {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=index.css.map */
