@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import Bringing from "../components/Bringing";
 import Card from "../components/Card";
 import Categories from "../components/Categories";
 import Data from "../data.json";
 
 export default function SpeakersScreen() {
   console.log(Data[5]);
-  const [productOne, setProductOne] = useState(Data[5]);
-  const [productTwo, setProductTwo] = useState(Data[4]);
+  const [productOne] = useState(Data[5]);
+  const [productTwo] = useState(Data[4]);
 
   return (
     <div className="speakers">
@@ -16,6 +17,7 @@ export default function SpeakersScreen() {
       <Card {...productOne} />
       <Card {...productTwo} imgStart="start" />
       <Categories/>
+      <Bringing/>
     </div>
   );
 }

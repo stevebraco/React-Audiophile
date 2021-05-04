@@ -1,4 +1,4 @@
-import { CART_ADD_INCREMENT, CART_ADD_ITEM } from "../constants/cartConstants"
+import { CART_ADD_DECREMENT, CART_ADD_INCREMENT, CART_ADD_ITEM, CART_EMPTY_ITEM } from "../constants/cartConstants"
 import test from '../data.json'
 
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
@@ -19,6 +19,36 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
     })
     localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
 };
+
+export const cartIncrement = (id) => async (dispatch, getState) => {
+    console.log(id);
+    dispatch({
+        type: CART_ADD_INCREMENT,
+        payload: id
+    })
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
+
+}
+
+export const cartDecrement = (id) => async (dispatch, getState) => {
+    console.log(id);
+    dispatch({
+        type: CART_ADD_DECREMENT,
+        payload: id
+    })
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
+
+}
+
+export const cartItemRemove = () => async (dispatch, getState) => {
+    dispatch({
+        type: CART_EMPTY_ITEM,
+    })
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
+
+}
+
+
 
 
 

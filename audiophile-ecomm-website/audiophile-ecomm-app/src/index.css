@@ -47,7 +47,7 @@ td, th {
 
 body {
   font-family: "Manrope", sans-serif;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 25px;
   background-color: #fafafa;
@@ -107,6 +107,17 @@ small {
   letter-spacing: 0.9px;
 }
 
+label {
+  text-transform: capitalize;
+  display: block;
+}
+
+input {
+  border-radius: 8px;
+  padding: 2rem 2.4rem;
+  border: 1px solid #CFCFCF;
+}
+
 a {
   text-decoration: none;
 }
@@ -122,8 +133,11 @@ button {
 }
 
 .black-op {
-  color: black;
-  opacity: 0.5;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .new-product {
@@ -161,6 +175,10 @@ button {
   flex-direction: column;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .go-back {
   display: block;
   margin-top: 7.9rem;
@@ -183,7 +201,7 @@ button {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 3.5rem;
   transition: 0.5s;
 }
 
@@ -218,6 +236,12 @@ button {
   text-transform: uppercase;
   font-weight: 700;
   margin-right: 1.3rem;
+}
+
+.btn-primary--checkout {
+  display: block;
+  text-align: center;
+  margin-top: 2.4rem;
 }
 
 .c-primary {
@@ -436,11 +460,14 @@ button {
   padding-bottom: 4.7rem;
 }
 .card__wrapper-input {
-  max-width: 12rem;
+  width: 12rem;
   position: relative;
   margin-right: 1.6rem;
 }
-.card__input-details {
+.card__wrapper-input--cart {
+  width: 9.6rem;
+}
+.card__value-details {
   outline: none;
   background-color: #f1f1f1;
   border: none;
@@ -528,13 +555,44 @@ button {
   padding: 3.1rem;
   top: 15%;
   right: 10em;
-  width: 377px;
+  width: 440px;
   background-color: white;
   border-radius: 8px;
+}
+.cart__info {
+  margin-bottom: 3.2rem;
+}
+.cart__container {
+  max-height: 300px;
+  overflow: auto;
+  margin-bottom: 3.2rem;
+}
+.cart__product {
+  margin-bottom: 2.4rem;
 }
 .cart__img {
   width: 64px;
   height: 64px;
+}
+.cart__remove {
+  text-decoration: underline rgba(0, 0, 0, 0.2);
+}
+
+.checkout {
+  max-width: 730px;
+  padding: 5.4rem 4.8rem 4.8rem;
+}
+.checkout__form-group {
+  display: flex;
+  flex-flow: column;
+  width: 30.9rem;
+}
+.checkout__container-two {
+  gap: 1.6rem;
+}
+.checkout__form-group-full {
+  display: flex;
+  flex-flow: column;
 }
 
 /*# sourceMappingURL=index.css.map */

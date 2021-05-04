@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { addToCart } from '../actions/cartActions';
 
 export default function CartScreen(props) {
@@ -7,9 +7,8 @@ export default function CartScreen(props) {
     const qty = props.location.search
     ? Number(props.location.search.split("=")[1])
     : 1;    console.log(productId, qty);
-    const cart = useSelector((state) => state.cart);
-    // const { cartItems } = cart; // Déstructure cart.cartItems
-    // console.log(cartItems);
+
+   
   const dispatch = useDispatch();
   useEffect(() => {
     if (productId) {

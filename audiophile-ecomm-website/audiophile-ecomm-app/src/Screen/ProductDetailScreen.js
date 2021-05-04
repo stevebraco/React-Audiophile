@@ -10,7 +10,7 @@ export default function ProductDetailScreen(props) {
 
   const productId = props.match.params.slug - 1;
 
-  const [product, setProduct] = useState(Data[productId]);
+  const [product] = useState(Data[productId]);
   const dispatch = useDispatch();
 
   const addToCartHandler = (productId, qty) => {
@@ -24,7 +24,6 @@ export default function ProductDetailScreen(props) {
     category,
     description,
     image,
-    slug,
     imgStart,
     new: newProduct,
     price,
@@ -43,6 +42,20 @@ export default function ProductDetailScreen(props) {
       setQty(1);
     }
   };
+
+  const filterPrice = (price) => {
+    
+    const priceLength = price.toString().length
+    if(priceLength === 4) {
+      price = (price / 1000).toFixed(3);
+    }
+
+
+    return  price
+
+  }
+  
+  
 
   return (
     <>
@@ -70,15 +83,12 @@ export default function ProductDetailScreen(props) {
 
           <h2 className="card__title">{name}</h2>
           <p className="card__description-details black-op ">{description}</p>
-          <h6 className="card__price-details">${price}</h6>
+          <h6 className="card__price-details">$ {filterPrice(price)}</h6>
           <div className="dp-flex">
             <div className="card__wrapper-input">
-              <input
-                className="card__input-details"
-                type="text"
-                onChange={(e) => setQty(e.target.value)}
-                value={qty}
-              />
+              <p
+                className="card__value-details"
+              > {qty} </p>
               <button
                 onClick={handleToIncrement}
                 className="card__plus-details black-op"
@@ -111,12 +121,12 @@ export default function ProductDetailScreen(props) {
           <div className="card-features__description-box">
             <h3 className="card-features__title">in the box</h3>
             <ul>
-              {includes.map((item) => (
-                <li>
+              {includes.map((item, index) => (
+                <li key={index} >
                   <strong className="c-primary">{item.quantity}x</strong>
                   <span className="card-features__item black-op">
                     {item.item}
-                  </span>{" "}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -148,7 +158,7 @@ export default function ProductDetailScreen(props) {
         <h3 className="also-like__heading">you may also like</h3>
         <div className="also-like__container dp-flex">
           {others.map((item) => (
-            <div className="also-like__card">
+            <div key={id} className="also-like__card">
               <img
                 className="also-like__img"
                 src={`${process.env.PUBLIC_URL}/${item.image.desktop}`}

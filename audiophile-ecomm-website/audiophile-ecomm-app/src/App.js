@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomeScreen from './Screen/HomeScreen';
-import Bringing from './components/Bringing';
 import Footer from './components/Footer';
 import HeadPhonesScreen from './Screen/HeadPhonesScreen';
 import SpeakersScreen from './Screen/SpeakersScreen';
@@ -11,6 +9,7 @@ import EarPhonesScreen from './Screen/EarPhonesScreen';
 import ScrollToTop from './components/ScrollToTop';
 import ProductDetailScreen from './Screen/ProductDetailScreen';
 import CartScreen from './Screen/CartScreen';
+import CheckoutScreen from './Screen/CheckoutScreen';
 
 
 function App() {
@@ -29,8 +28,8 @@ function App() {
         <Route path='/earphones' exact component={EarPhonesScreen}></Route>
         <Route path='/product/:slug' component={ProductDetailScreen}></Route>
         <Route path='/cart/:slug' component={CartScreen}></Route>
+        <Route path='/checkout' component={CheckoutScreen}></Route>
       </Switch>
-      <Bringing/>
       <Footer/>
     </Router>
     </>

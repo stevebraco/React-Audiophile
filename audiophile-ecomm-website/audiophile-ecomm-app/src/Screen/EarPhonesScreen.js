@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import Bringing from "../components/Bringing";
 import Card from "../components/Card";
 import Categories from "../components/Categories";
 import Data from "../data.json";
 
 export default function EarPhonesScreen() {
-  const [productOne, setProductOne] = useState(Data[0]);
+  const [productOne] = useState(Data[0]);
 
   return (
     <div className="earphones">
@@ -13,6 +14,8 @@ export default function EarPhonesScreen() {
         </div>
       <Card {...productOne}/>
       <Categories/>
+      <Bringing/>
+
     </div>
   );
 }

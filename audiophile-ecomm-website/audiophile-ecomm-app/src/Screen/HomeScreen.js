@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Bringing from "../components/Bringing";
 import Categories from "../components/Categories";
 
 export default function HomeScreen() {
@@ -58,6 +59,7 @@ export default function HomeScreen() {
           </div>
         </div>
       </div>
+      <Bringing/>
     </>
   );
 }

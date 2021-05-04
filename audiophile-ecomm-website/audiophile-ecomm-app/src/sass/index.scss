@@ -4,7 +4,7 @@
 
 body {
   font-family: $fonts;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: $medium;
   line-height: 25px;
   background-color: $whiteSmoke;
@@ -64,6 +64,17 @@ small {
   letter-spacing: 0.9px;
 }
 
+label {
+  text-transform: capitalize;
+  display: block;
+}
+input {
+  border-radius: 8px;
+  padding: 2rem 2.4rem;
+  border: 1px solid #CFCFCF;
+  
+}
+
 a {
   text-decoration: none;
 }
@@ -77,9 +88,10 @@ button {
   letter-spacing: 10px;
 }
 .black-op {
-  color: $black;
-  opacity: .5;
-
+  color: rgba(0, 0, 0, .5);
+}
+.uppercase {
+  text-transform: uppercase;
 }
 .new-product {
   opacity: 0.4;
@@ -115,6 +127,9 @@ button {
 .fd-column {
   flex-direction: column;
 }
+.space-between {
+  justify-content: space-between;
+}
 
 .go-back {
   display: block;
@@ -140,7 +155,7 @@ button {
   font-weight: $bold;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 3.5rem;
   transition: .5s;
 }
 .btn-primary {
@@ -167,7 +182,7 @@ button {
     background: $black;
     color: $white;
   }
-  
+
 }
 
 .btn-shop span {
@@ -178,7 +193,11 @@ button {
   margin-right: 1.3rem;
 
 }
-
+.btn-primary--checkout {
+  display: block;
+  text-align: center;
+  margin-top: 2.4rem;
+}
 .c-primary {
   color: $primary;
 }
@@ -443,12 +462,17 @@ button {
   }
 
   &__wrapper-input {
-    max-width: 12rem;
+    width: 12rem;
     position: relative;
     margin-right: 1.6rem;
   }
+
+  &__wrapper-input--cart {
+    width: 9.6rem;
+    
+  }
   
-  &__input-details {
+  &__value-details {
     outline: none;
     background-color: $lightGray;
     border: none;
@@ -561,12 +585,50 @@ button {
   padding: 3.1rem;
   top: 15%;
   right: 10em;
-    width: 377px;
+    width: 440px;
     background-color: white;
     border-radius: 8px;
+
+    &__info {
+      margin-bottom: 3.2rem;
+    }
+
+    &__container {
+      max-height: 300px;
+      overflow: auto;
+      margin-bottom: 3.2rem;
+    }
+
+    &__product {
+      margin-bottom: 2.4rem;
+    }
 
     &__img {
       width: 64px;
       height: 64px;
     }
+
+    &__remove {
+      text-decoration: underline rgba(0, 0, 0, .2);
+      
+    }
 }
+
+//CHECKOUTSCREEN
+.checkout {
+  max-width: 730px;
+  padding: 5.4rem 4.8rem 4.8rem;
+
+  &__form-group {
+    display: flex;
+    flex-flow: column;
+    width: 30.9rem;
+  }
+  &__container-two {
+    gap: 1.6rem;
+  }
+  &__form-group-full {
+    display: flex;
+    flex-flow: column;  }
+}
+
