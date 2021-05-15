@@ -35,6 +35,7 @@ export default function ProductDetailScreen(props) {
     others,
   } = product;
 
+
   const handleToIncrement = () => {
     setQty(qty + 1);
   };
@@ -71,20 +72,23 @@ export default function ProductDetailScreen(props) {
           flexDirection: imgStart === "start" ? "row-reverse" : "row",
         }}
       >
+        <picture className='card-detail__picture'>
+          <source media="(max-width: 985px)" srcset={`${process.env.PUBLIC_URL}/${image.tablet}`}/>
         <img
           className="card__img"
           src={`${process.env.PUBLIC_URL}/${image.desktop}`}
           alt={name}
         />
-        <div className="card__content">
+        </picture>
+        <div className="card__content card__content--detail">
           {newProduct ? (
             <p className="card__new-product l-spacing">new product</p>
           ) : null}
 
-          <h2 className="card__title">{name}</h2>
+          <h2 className="card__title card__title--detail">{name}</h2>
           <p className="card__description-details black-op ">{description}</p>
           <h6 className="card__price-details">$ {filterPrice(price)}</h6>
-          <div className="dp-flex">
+          <div className="dp-flex card__button">
             <div className="card__wrapper-input">
               <p
                 className="card__value-details"

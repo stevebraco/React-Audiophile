@@ -85,13 +85,13 @@ export default function Navbar() {
           </Link>
         </div>
         </div>
-      
         <button onClick={handleOpen}>
           <img
             src={`${process.env.PUBLIC_URL}/assets/shared/desktop/icon-cart.svg`}
             alt="cart"
           />
         </button>
+      
       </nav>
       <Modal open={open} onClose={handleClose}>
         <div className="cart">

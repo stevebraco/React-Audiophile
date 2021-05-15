@@ -22,14 +22,15 @@ export default function HomeScreen() {
       <Categories />
       <div className="container">
         <div className="speaker-zx9 dp-flex">
-          <div className="speaker-zx9__img"
->
+          <picture className="speaker-zx9__picture">
+          <source media="(max-width: 985px)" srcset="./assets/home/desktop/image-speaker-zx9.png"/>
           <img
+            className="c__img"
             src="./assets/home/desktop/image-speaker-zx9.png"
-            alt=""
+            alt="speaker-zx9"
             srcset=""
           />
-          </div>
+          </picture>
           <div className="speaker-zx9__description">
             <h1 className="speaker-zx9__title">zx9 speaker</h1>
             <p className="speaker-zx9__text">
@@ -42,7 +43,7 @@ export default function HomeScreen() {
 
         <div className="speaker-zx7">
           <div className="speaker-zx7__description">
-            <h4 className="speaker-zx7__title">zx7 speaker</h4>
+            <h4 className="speaker-zx7__title">YX1 EARPHONES</h4>
             <Link className="btn btn-outline">see product</Link>
           </div>
         </div>
@@ -50,14 +51,20 @@ export default function HomeScreen() {
 
       <div className="container">
         <div className="earphones-yx1 dp-flex">
+          <picture className='earphones-yx1__picture'>
+          <source media="(max-width: 985px)" srcset="./assets/home/tablet/image-earphones-yx1.jpg"/>
+
           <img
             className="earphones-yx1__img"
             src="./assets/home/desktop/image-earphones-yx1.jpg"
-            alt=""
+            alt="earphones-yx1"
           />
+          </picture>
           <div className="earphones-yx1__description">
-            <h4 className="earphones-yx1__title">zx7 speaker</h4>
+            <div className="earphones-yx1__content">
+            <h4 className="earphones-yx1__title">yx1 earphones</h4>
             <Link className="btn btn-outline">see product</Link>
+            </div>
           </div>
         </div>
       </div>

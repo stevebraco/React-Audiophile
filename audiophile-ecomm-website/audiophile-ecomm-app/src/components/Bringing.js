@@ -15,7 +15,11 @@ export default function Bringing() {
             make Audiophile the best place to buy your portable audio equipment.
           </p>
         </div>
-      <img src={`${process.env.PUBLIC_URL}/assets/shared/desktop/image-best-gear.jpg`} alt="" srcset="" />
+        <picture>
+        <source media="(max-width: 985px)" srcset={`${process.env.PUBLIC_URL}/assets/shared/tablet/image-best-gear.jpg`}/>
+
+      <img src={`${process.env.PUBLIC_URL}/assets/shared/desktop/image-best-gear.jpg`} alt="person"  />
+      </picture>
       
       </div>
     </section>
