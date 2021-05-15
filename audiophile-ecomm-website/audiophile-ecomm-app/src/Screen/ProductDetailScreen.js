@@ -12,6 +12,7 @@ export default function ProductDetailScreen(props) {
   const productId = props.match.params.slug - 1;
 
   const [product] = useState(Data[productId]);
+  console.log(Data[productId].slug);
   const dispatch = useDispatch();
 
   const addToCartHandler = (productId, qty) => {
@@ -60,7 +61,6 @@ export default function ProductDetailScreen(props) {
 
   return (
     <>
-      {/* <div className="background-nav"></div> */}
     <div className='container'>
     <BtnGoBack/>
 
@@ -157,8 +157,9 @@ export default function ProductDetailScreen(props) {
       <div className="also-like">
         <h3 className="also-like__heading">you may also like</h3>
         <div className="also-like__container dp-flex">
-          {others.map((item) => (
-            <div key={id} className="also-like__card">
+          {others.map((item, index) => (
+            <div key={index} className="also-like__card">
+              {console.log(item)}
               <img
                 className="also-like__img"
                 src={`${process.env.PUBLIC_URL}/${item.image.desktop}`}
@@ -166,7 +167,6 @@ export default function ProductDetailScreen(props) {
               />
               <h5 className="also-like__title"> {item.name} </h5>
               <Link to={`/product/${id}`} className="btn btn-primary">
-                {" "}
                 see product
               </Link>
             </div>

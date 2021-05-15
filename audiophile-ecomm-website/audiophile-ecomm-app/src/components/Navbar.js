@@ -10,6 +10,15 @@ import {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [click, setClick] = useState(false);
+  const closeMobileMenu = () => setClick(false);
+
+
+  const handleClick = () => setClick(!click); //Toggle
+
+  console.log(click);
+
+
 
   const dispatch = useDispatch();
 
@@ -52,25 +61,31 @@ export default function Navbar() {
   return (
     <header className="header">
       <nav className="navbar container dp-flex">
-        <div className="navbar__menu dp-flex">
+        <div className='dp-flex'>
+        <div className='icon' onClick={handleClick}>
+        <i class='bx bx-menu'></i>
+        </div>
           <img
             className="navbar__logo"
             src={`${process.env.PUBLIC_URL}/assets/shared/desktop/logo.svg`}
             alt="logo"
           />
-          <Link className="navbar__link" to="/">
+        <div className={click ? 'navbar__menu dp-flex show-menu': 'navbar__menu dp-flex'}>
+          <Link className="navbar__link" to="/" onClick={closeMobileMenu}>
             home
           </Link>
-          <Link className="navbar__link" to="/headphones">
+          <Link className="navbar__link" to="/headphones" onClick={closeMobileMenu}>
             headphones
           </Link>
-          <Link className="navbar__link" to="/speakers">
+          <Link className="navbar__link" to="/speakers" onClick={closeMobileMenu}>
             speakers
           </Link>
-          <Link className="navbar__link" to="/earphones">
+          <Link className="navbar__link" to="/earphones" onClick={closeMobileMenu}>
             earphones
           </Link>
         </div>
+        </div>
+      
         <button onClick={handleOpen}>
           <img
             src={`${process.env.PUBLIC_URL}/assets/shared/desktop/icon-cart.svg`}

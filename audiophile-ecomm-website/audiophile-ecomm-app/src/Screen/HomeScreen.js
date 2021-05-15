@@ -22,12 +22,14 @@ export default function HomeScreen() {
       <Categories />
       <div className="container">
         <div className="speaker-zx9 dp-flex">
+          <div className="speaker-zx9__img"
+>
           <img
-            className="speaker-zx9__img"
             src="./assets/home/desktop/image-speaker-zx9.png"
             alt=""
             srcset=""
           />
+          </div>
           <div className="speaker-zx9__description">
             <h1 className="speaker-zx9__title">zx9 speaker</h1>
             <p className="speaker-zx9__text">

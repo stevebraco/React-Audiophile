@@ -254,6 +254,12 @@ button {
   color: #d87d4a;
 }
 
+.icon {
+  color: white;
+  font-size: 2.5rem;
+  display: none;
+}
+
 .navbar {
   border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
   justify-content: space-between;
@@ -348,7 +354,6 @@ button {
 }
 .speaker-zx9__description {
   max-width: 34.9rem;
-  margin-left: auto;
   padding-bottom: 12.4rem;
   padding-top: 13.3rem;
 }
@@ -359,11 +364,8 @@ button {
   padding-bottom: 4rem;
 }
 .speaker-zx9__img {
-  width: 410px;
-  height: 493px;
-  position: absolute;
-  top: 9rem;
-  left: 10%;
+  max-width: 41rem;
+  transform: translateY(9rem);
 }
 
 .speaker-zx7 {
@@ -679,6 +681,53 @@ input[type=radio]:checked:after {
   height: 400px;
   background: white;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 950px) {
+  .icon {
+    display: block;
+    cursor: pointer;
+    margin-right: 4.2rem;
+  }
+
+  .navbar__menu {
+    display: initial;
+    /* display: flex; */
+    /* -webkit-flex-direction: column; */
+    background: black;
+    z-index: 1;
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: 0.5s;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    transition: max-height 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    overflow: auto;
+  }
+
+  .navbar__link {
+    margin: 0;
+    padding: 3rem;
+    transition: none 0s ease 0s;
+    transition: initial;
+    display: block;
+  }
+  .navbar__link:hover {
+    background: #1d1d1d;
+  }
+
+  .show-menu {
+    transform: scaleY(1);
+    max-height: 100vh;
+    padding-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

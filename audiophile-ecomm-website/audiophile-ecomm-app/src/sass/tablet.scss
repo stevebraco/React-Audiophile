@@ -1,0 +1,50 @@
+@media screen and (max-width: 950px) {
+
+    .icon {
+        display: block;
+        cursor: pointer;
+        margin-right: 4.2rem;
+    }
+
+    .navbar__menu {
+        display: initial;
+        /* display: flex; */
+        /* -webkit-flex-direction: column; */
+        background: $black;
+        z-index: 1;
+        position: absolute;
+        top: 9rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transition: .5s;
+        box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+        max-height: 0;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        transition: max-height .3s,transform .3s,-webkit-transform .3s;
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        overflow: auto;
+    }
+
+    .navbar__link {
+        margin: 0;
+        padding: 3rem;
+        transition: none 0s ease 0s;
+        transition: initial;
+        display: block;
+        &:hover {
+           background:rgb(29, 29, 29)
+        }
+    }
+
+//SHOW MENU
+.show-menu {
+    transform: scaleY(1);
+    max-height: 100vh;
+    padding-bottom: 1rem;
+
+  }
+
+}
