@@ -3,7 +3,7 @@ import React from "react";
 export default function Bringing() {
   return (
     <section className="bringing container">
-      <div className="bringing__container dp-flex">
+      <div className="bringing__container">
         <div className="bringing__description">
           <h2 className="bringing__title">Bringing you the <span className='c-primary'>best</span> audio gear</h2>
           <p className="bringing__text black-op">

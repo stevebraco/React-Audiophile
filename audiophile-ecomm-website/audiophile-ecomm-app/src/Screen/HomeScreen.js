@@ -31,6 +31,7 @@ export default function HomeScreen() {
             srcset=""
           />
           </picture>
+
           <div className="speaker-zx9__description">
             <h1 className="speaker-zx9__title">zx9 speaker</h1>
             <p className="speaker-zx9__text">
@@ -50,7 +51,7 @@ export default function HomeScreen() {
       </div>
 
       <div className="container">
-        <div className="earphones-yx1 dp-flex">
+        <div className="earphones-yx1">
           <picture className='earphones-yx1__picture'>
           <source media="(max-width: 985px)" srcset="./assets/home/tablet/image-earphones-yx1.jpg"/>
 
@@ -60,6 +61,7 @@ export default function HomeScreen() {
             alt="earphones-yx1"
           />
           </picture>
+
           <div className="earphones-yx1__description">
             <div className="earphones-yx1__content">
             <h4 className="earphones-yx1__title">yx1 earphones</h4>

@@ -125,14 +125,16 @@ button {
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1190px;
   margin: 0 auto;
+  padding-left: 40px ;
+  padding-right: 40px;
 }
 
 .dp-flex {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 }
 .fd-column {
   flex-direction: column;
@@ -223,6 +225,8 @@ button {
   justify-content: space-between;
   align-content: center;
   height: 9.6rem;
+  flex-wrap: wrap;
+
 
   &__logo {
     margin-right: 16.5rem;
@@ -312,9 +316,8 @@ button {
 // speaker-zx9
 .speaker-zx9 {
   position: relative;
-  justify-content: space-between;
-  padding-left: 11.7rem;
-  padding-right: 9.5rem;
+  justify-content: space-around;
+ 
   background-color: $primary;
   color: $white;
   overflow: hidden;
@@ -339,8 +342,8 @@ button {
   }
 
   &__picture {
-    max-width: 45.7%;
-    transform: translateY(83px);
+    max-width: 40rem;
+    transform: translateY(9rem);
   }
 }
 
@@ -361,10 +364,10 @@ button {
 
 //earphones-yx1
 .earphones-yx1 {
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 3rem;
   margin-bottom: 20rem;
-
   &__img {
     border-radius: 8px;
   }
@@ -374,10 +377,10 @@ button {
   }
 
   &__description {
-    flex: 1 1;
     border-radius: 8px;
     padding: 10.1rem 9.5rem;
     background: $lightGray;
+
   }
 }
 
@@ -386,8 +389,8 @@ button {
   margin-bottom: 16rem;
   
   &__container {
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   &__description {
@@ -443,6 +446,7 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16rem;
+  gap: 12.5rem;
 
   &__new-product {
     color: $primary;
@@ -459,12 +463,16 @@ button {
   }
 
   &__content {
-    max-width: 44.5rem;
+    max-width: 44.5%;
   }
 
-  &__img {
-    width: 540px;
+  &__picture {
+    max-width: 54%;
   }
+  &__img {
+    // width: 540px;
+  }
+  
 
   //product details
   &__description-details {
@@ -531,6 +539,8 @@ button {
 
   &__container {
     justify-content: space-between;
+    gap: 5rem;
+
   }
   
   &__description {
@@ -563,6 +573,11 @@ button {
 
   &__container, &__two-gallery {
     justify-content: space-between;
+  }
+
+  &__container {
+    flex-wrap: nowrap;
+    gap: 3rem;
   }
 
   &__img {

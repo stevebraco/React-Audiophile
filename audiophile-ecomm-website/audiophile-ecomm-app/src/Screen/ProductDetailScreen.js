@@ -66,13 +66,8 @@ export default function ProductDetailScreen(props) {
     <BtnGoBack/>
 
       <div
-        className="card dp-flex"
-        style={{
-          display: "flex",
-          flexDirection: imgStart === "start" ? "row-reverse" : "row",
-        }}
-      >
-        <picture className='card-detail__picture'>
+        className="card dp-flex" >
+        <picture className='card__picture'>
           <source media="(max-width: 985px)" srcset={`${process.env.PUBLIC_URL}/${image.tablet}`}/>
         <img
           className="card__img"
@@ -140,22 +135,28 @@ export default function ProductDetailScreen(props) {
       <div className="gallery">
         <div className="gallery__container dp-flex">
           <div className="gallery__two-gallery dp-flex fd-column">
-            <img
-              className="gallery__img"
-              src={`${process.env.PUBLIC_URL}/${gallery.first.desktop}`}
-              alt=""
+            <picture>
+            <source media="(max-width: 985px)" srcSet={`${process.env.PUBLIC_URL}/${gallery.first.tablet}`}/> 
+            <img className="gallery__img" src={`${process.env.PUBLIC_URL}/${gallery.first.desktop}`} alt=""
             />
+            </picture>
+            <picture>
+            <source media="(max-width: 985px)" srcSet={`${process.env.PUBLIC_URL}/${gallery.second.tablet}`}/> 
             <img
               className="gallery__img"
               src={`${process.env.PUBLIC_URL}/${gallery.second.desktop}`}
               alt=""
             />
+            </picture>
           </div>
+          <picture>
+          <source media="(max-width: 985px)" srcSet={`${process.env.PUBLIC_URL}/${gallery.third.tablet}`}/> 
           <img
             className="gallery__img"
             src={`${process.env.PUBLIC_URL}/${gallery.third.desktop}`}
             alt=""
           />
+          </picture>
         </div>
       </div>
       <div className="also-like">
@@ -163,12 +164,14 @@ export default function ProductDetailScreen(props) {
         <div className="also-like__container dp-flex">
           {others.map((item, index) => (
             <div key={index} className="also-like__card">
-              {console.log(item)}
+              <picture>
+          <source media="(max-width: 985px)" srcSet={`${process.env.PUBLIC_URL}/${item.image.tablet}`}/> 
               <img
                 className="also-like__img"
                 src={`${process.env.PUBLIC_URL}/${item.image.desktop}`}
                 alt={item.slug}
               />
+              </picture>
               <h5 className="also-like__title"> {item.name} </h5>
               <Link to={`/product/${id}`} className="btn btn-primary">
                 see product

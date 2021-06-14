@@ -171,14 +171,15 @@ button {
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1190px;
   margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .dp-flex {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .fd-column {
@@ -269,6 +270,7 @@ button {
   justify-content: space-between;
   align-content: center;
   height: 9.6rem;
+  flex-wrap: wrap;
 }
 .navbar__logo {
   margin-right: 16.5rem;
@@ -344,9 +346,7 @@ button {
 
 .speaker-zx9 {
   position: relative;
-  justify-content: space-between;
-  padding-left: 11.7rem;
-  padding-right: 9.5rem;
+  justify-content: space-around;
   background-color: #d87d4a;
   color: white;
   overflow: hidden;
@@ -368,8 +368,8 @@ button {
   padding-bottom: 4rem;
 }
 .speaker-zx9__picture {
-  max-width: 45.7%;
-  transform: translateY(83px);
+  max-width: 40rem;
+  transform: translateY(9rem);
 }
 
 .speaker-zx7 {
@@ -385,7 +385,8 @@ button {
 }
 
 .earphones-yx1 {
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 3rem;
   margin-bottom: 20rem;
 }
@@ -396,7 +397,6 @@ button {
   padding-bottom: 2.4rem;
 }
 .earphones-yx1__description {
-  flex: 1 1;
   border-radius: 8px;
   padding: 10.1rem 9.5rem;
   background: #f1f1f1;
@@ -406,8 +406,8 @@ button {
   margin-bottom: 16rem;
 }
 .bringing__container {
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .bringing__description {
   max-width: 44.5rem;
@@ -448,6 +448,7 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16rem;
+  gap: 12.5rem;
 }
 .card__new-product {
   color: #d87d4a;
@@ -461,10 +462,10 @@ button {
   padding-bottom: 4rem;
 }
 .card__content {
-  max-width: 44.5rem;
+  max-width: 44.5%;
 }
-.card__img {
-  width: 540px;
+.card__picture {
+  max-width: 54%;
 }
 .card__description-details {
   padding-bottom: 3.2rem;
@@ -516,6 +517,7 @@ button {
 }
 .card-features__container {
   justify-content: space-between;
+  gap: 5rem;
 }
 .card-features__description {
   max-width: 63rem;
@@ -539,6 +541,10 @@ button {
 }
 .gallery__container, .gallery__two-gallery {
   justify-content: space-between;
+}
+.gallery__container {
+  flex-wrap: nowrap;
+  gap: 3rem;
 }
 .gallery__img {
   border-radius: 8px;
@@ -691,7 +697,139 @@ input[type=radio]:checked:after {
   border-radius: 8px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 985px) {
+  .bringing, .earphones-yx1 {
+    margin-bottom: 9.6rem;
+  }
+
+  .categories__container {
+    padding-bottom: 12rem;
+    gap: 1.1rem;
+  }
+
+  .speaker-zx9, .footer__nav {
+    flex-direction: column;
+  }
+
+  .home__container {
+    background: url("./images/home/tablet/image-header.jpg") no-repeat;
+    background-position: center -7rem;
+    background-size: contain;
+  }
+
+  .home__description-headphones {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .speaker-zx9 {
+    align-items: center;
+    background-position: center -32rem;
+  }
+  .speaker-zx9__description {
+    margin-left: initial;
+    text-align: center;
+    padding-bottom: 6.4rem;
+    padding-top: 6.4rem;
+  }
+  .speaker-zx9__picture {
+    transform: translateY(0px);
+    padding-top: 5.2rem;
+    max-width: 286px;
+  }
+
+  .earphones-yx1 {
+    gap: 1.1;
+  }
+
+  .earphones-yx1__description {
+    padding: initial;
+  }
+
+  .earphones-yx1__picture {
+    flex: 1 1;
+  }
+
+  .earphones-yx1__content {
+    padding: 10.1rem 4.1rem;
+  }
+
+  .bringing__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 6.3rem;
+  }
+
+  .bringing__description {
+    max-width: 57.3rem;
+    text-align: center;
+  }
+
+  .card {
+    margin-bottom: 12rem;
+    flex-direction: column !important;
+  }
+  .card__img {
+    height: 430px;
+    width: 100%;
+    object-fit: none;
+  }
+  .card__picture {
+    max-width: 100%;
+    width: 100%;
+    background: #f1f1f1;
+    margin-bottom: 5.2rem;
+  }
+  .card__content {
+    max-width: 57.2rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .card__title {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+  .card__content--detail {
+    text-align: initial;
+  }
+  .card__title--detail {
+    margin: initial;
+  }
+
+  .card-features__container {
+    flex-direction: column;
+  }
+  .card-features__description {
+    max-width: 100%;
+  }
+  .card-features__description-box {
+    width: 100%;
+    max-width: 54.9rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .also-like__container {
+    gap: 1.1rem;
+  }
+
+  .footer__nav {
+    align-items: baseline;
+    gap: 3.2rem;
+  }
+
+  .footer__text {
+    max-width: 69rem;
+  }
+
+  .footer__social {
+    position: absolute;
+    right: 4rem;
+    bottom: 46px;
+  }
+}
+@media screen and (max-width: 985px) {
   .icon {
     display: block;
     cursor: pointer;
@@ -735,120 +873,6 @@ input[type=radio]:checked:after {
     transform: scaleY(1);
     max-height: 100vh;
     padding-bottom: 1rem;
-  }
-}
-@media screen and (max-width: 985px) {
-  .container {
-    max-width: calc(100% - 8rem);
-  }
-
-  .bringing, .earphones-yx1 {
-    margin-bottom: 9.6rem;
-  }
-
-  .categories__container {
-    padding-bottom: 12rem;
-  }
-
-  .speaker-zx9, .footer__nav {
-    flex-direction: column;
-  }
-
-  .home__container {
-    background: url("./images/home/tablet/image-header.jpg") no-repeat;
-    background-position: center -7rem;
-    background-size: contain;
-  }
-
-  .home__description-headphones {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .speaker-zx9 {
-    align-items: center;
-    background-position: center -32rem;
-  }
-  .speaker-zx9__description {
-    margin-left: initial;
-    max-width: 53%;
-    text-align: center;
-    padding-bottom: 6.4rem;
-    padding-top: 6.4rem;
-  }
-  .speaker-zx9__picture {
-    transform: translateY(0px);
-    padding-top: 5.2rem;
-  }
-
-  .earphones-yx1 {
-    gap: 1.1;
-  }
-
-  .earphones-yx1__description {
-    padding: initial;
-  }
-
-  .earphones-yx1__picture, .card-detail__picture {
-    flex: 1 1;
-  }
-
-  .earphones-yx1__content {
-    padding: 10.1rem 4.1rem;
-  }
-
-  .bringing__container {
-    flex-direction: column-reverse;
-    gap: 6.3rem;
-  }
-
-  .bringing__description {
-    max-width: 57.3rem;
-    text-align: center;
-  }
-
-  .card {
-    margin-bottom: 12rem;
-  }
-  .card__img {
-    height: 400px;
-    width: 100%;
-    object-fit: contain;
-  }
-  .card__picture {
-    width: 100%;
-    background: #f1f1f1;
-    margin-bottom: 5.2rem;
-  }
-  .card__content {
-    max-width: 57.2rem;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .card__title {
-    max-width: 30rem;
-    margin: 0 auto;
-  }
-  .card__content--detail {
-    text-align: initial;
-  }
-  .card__title--detail {
-    margin: initial;
-  }
-
-  .footer__nav {
-    align-items: baseline;
-    gap: 3.2rem;
-  }
-
-  .footer__text {
-    max-width: 69rem;
-  }
-
-  .footer__social {
-    position: absolute;
-    right: 4rem;
-    bottom: 46px;
   }
 }
 
