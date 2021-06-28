@@ -1,7 +1,8 @@
 @media screen and (max-width: 985px) {
-  // .container {
-  //   max-width: calc(100% - 8rem);
-  // }
+ h6 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+ }
 
   .bringing, .earphones-yx1 {
     margin-bottom: 9.6rem;
@@ -67,8 +68,11 @@
     max-width: 57.3rem;
     text-align: center;
   }
-
   .card {
+    gap: 6rem;
+  }
+
+  .card--info {
       margin-bottom: 12rem;
       flex-direction: column !important;
 

@@ -303,9 +303,9 @@ button {
   }
 
   &__figure {
-    width: 220px;
-    margin: 0 auto;
-    transform: translateY(32px);
+    // width: 220px;
+    // margin: 0 auto;
+    transform: translateY(50px);
   }
 
   &__title {
@@ -752,3 +752,4 @@ input[type='radio']:checked:after {
 }
 
 @import './media-tablet.scss';
+@import './media-mobile.scss';

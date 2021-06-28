@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 
 export default function Card({ name, id, category, description, image, slug, imgStart, new: newProduct, }) {
   return (
-    <div className="card  dp-flex container" 
+    <div className="card card--info  dp-flex container" 
     style={{
               display: 'flex',
               flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'
             }}
     >
-      <picture className='card__picture'>
+      <picture className='card__picture card--info__picture'>
+      <source media="(max-width: 600px)" srcset={image.mobile}/> 
       <source media="(max-width: 985px)" srcset={image.tablet}/> 
-      <img className="card__img" src={image.desktop} alt={name} />
+      <img className="card__img card--info__img" src={image.desktop} alt={name} />
       </picture>
-      <div className="card__content">
+      <div className="card__content card--info__content">
         {newProduct ? (
           <p className="card__new-product l-spacing">new product</p>
         ) : null}
