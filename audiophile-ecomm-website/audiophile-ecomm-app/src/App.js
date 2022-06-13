@@ -10,28 +10,33 @@ import ScrollToTop from './components/ScrollToTop';
 import ProductDetailScreen from './Screen/ProductDetailScreen';
 import CartScreen from './Screen/CartScreen';
 import CheckoutScreen from './Screen/CheckoutScreen';
-
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { listProducts } from './actions/productsActions';
 
 function App() {
+  const dispatch = useDispatch();
 
-
+  useEffect(() => {
+    dispatch(listProducts());
+  });
 
   return (
     <>
-    <Router>
-      <ScrollToTop/>
-      <Navbar/>
-      <Switch>
-        <Route path='/' exact component={HomeScreen}></Route>
-        <Route path='/headphones' exact component={HeadPhonesScreen}></Route>
-        <Route path='/speakers' exact component={SpeakersScreen}></Route>
-        <Route path='/earphones' exact component={EarPhonesScreen}></Route>
-        <Route path='/product/:slug' component={ProductDetailScreen}></Route>
-        <Route path='/cart/:slug' component={CartScreen}></Route>
-        <Route path='/checkout' component={CheckoutScreen}></Route>
-      </Switch>
-      <Footer/>
-    </Router>
+      <Router>
+        <ScrollToTop />
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={HomeScreen}></Route>
+          <Route path="/headphones" exact component={HeadPhonesScreen}></Route>
+          <Route path="/speakers" exact component={SpeakersScreen}></Route>
+          <Route path="/earphones" exact component={EarPhonesScreen}></Route>
+          <Route path="/product/:slug" component={ProductDetailScreen}></Route>
+          <Route path="/cart/:slug" component={CartScreen}></Route>
+          <Route path="/checkout" component={CheckoutScreen}></Route>
+        </Switch>
+        <Footer />
+      </Router>
     </>
   );
 }
