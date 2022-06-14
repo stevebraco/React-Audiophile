@@ -7,7 +7,7 @@ import {
 export const listProducts = () => async (dispatch, getState) => {
   dispatch({ type: FETCH_DATA_LOADING });
   try {
-    const fetchData = fetch('http://localhost:3000/data.json');
+    const fetchData = fetch('/data.json');
     const response = await fetchData;
     const data = await response.json();
     dispatch({ type: FETCH_DATA_SUCCESS, payload: data });
