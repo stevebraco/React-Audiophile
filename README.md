@@ -35,7 +35,7 @@
 ## 
 
  - [Audiophile](https://audiophile.vercel.app/)
- - [Code](hhttps://github.com/stevebraco/React-Audiophile/tree/main/audiophile-ecomm-website/audiophile-ecomm-app)
+ - [Code](https://github.com/stevebraco/React-Audiophile/tree/main/audiophile-ecomm-website/audiophile-ecomm-app)
 
 
 
