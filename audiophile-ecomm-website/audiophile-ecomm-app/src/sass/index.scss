@@ -1,6 +1,6 @@
-@import "./reset.scss";
-@import "./variables.scss";
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+@import './reset.scss';
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 
 body {
   font-family: $fonts;
@@ -8,7 +8,6 @@ body {
   font-weight: $medium;
   line-height: 25px;
   background-color: $whiteSmoke;
- 
 }
 
 h1,
@@ -68,11 +67,10 @@ small {
 label {
   text-transform: capitalize;
   display: block;
-  padding-bottom: .9rem;
+  padding-bottom: 0.9rem;
 }
 img {
   border-radius: 8px;
-
 }
 .no-capitalize {
   text-transform: initial;
@@ -80,9 +78,8 @@ img {
 input {
   border-radius: 8px;
   padding: 2rem 2.4rem;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
   outline-color: $primary;
-  
 }
 
 a {
@@ -98,7 +95,7 @@ button {
   letter-spacing: 10px;
 }
 .black-op {
-  color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .uppercase {
   text-transform: uppercase;
@@ -113,11 +110,11 @@ button {
   text-transform: uppercase;
 }
 
-//navbar background 
+//navbar background
 .background-nav {
   height: 9.6rem;
-    background: black;
-    margin-bottom: 7.9rem;
+  background: black;
+  margin-bottom: 7.9rem;
 }
 
 .header {
@@ -127,7 +124,7 @@ button {
 .container {
   max-width: 1190px;
   margin: 0 auto;
-  padding-left: 40px ;
+  padding-left: 40px;
   padding-right: 40px;
 }
 
@@ -149,7 +146,7 @@ button {
   margin-bottom: 5.6rem;
 }
 
-//BIG TITLE 
+//BIG TITLE
 .big-title {
   background: $black;
   color: $white;
@@ -168,7 +165,7 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 1.5rem 3.5rem;
-  transition: .5s;
+  transition: 0.5s;
 }
 .btn-primary {
   background: $primary;
@@ -187,6 +184,10 @@ button {
   }
 }
 
+.btn-disabled {
+  background-color: grey;
+}
+
 .btn-outline {
   color: $black;
   border: 1px solid $black;
@@ -194,16 +195,14 @@ button {
     background: $black;
     color: $white;
   }
-
 }
 
 .btn-shop span {
   color: $black;
-  opacity: .5;
+  opacity: 0.5;
   text-transform: uppercase;
   font-weight: $bold;
   margin-right: 1.3rem;
-
 }
 .btn-primary--checkout {
   display: block;
@@ -227,7 +226,6 @@ button {
   height: 9.6rem;
   flex-wrap: wrap;
 
-
   &__logo {
     margin-right: 16.5rem;
   }
@@ -241,7 +239,7 @@ button {
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: $bold;
-    transition: .3s;
+    transition: 0.3s;
 
     &:hover {
       color: $primary;
@@ -249,15 +247,13 @@ button {
   }
 }
 
-  
-
 //HOMESCREEN
 .home {
   background: #191919;
   margin-bottom: 12rem;
   &__container {
     color: $white;
-    background: url("./images/home/desktop/image-hero.jpg") no-repeat;
+    background: url('./images/home/desktop/image-hero.jpg') no-repeat;
     background-position: 50% -10rem;
   }
 
@@ -292,7 +288,7 @@ button {
   text-align: center;
   z-index: 1;
   &:after {
-    content: "";
+    content: '';
     background: $lightGray;
     position: absolute;
     height: 204px;
@@ -317,12 +313,12 @@ button {
 .speaker-zx9 {
   position: relative;
   justify-content: space-around;
- 
+
   background-color: $primary;
   color: $white;
   overflow: hidden;
   border-radius: 8px;
-  background-image: url("./images/home/desktop/pattern-circles.svg");
+  background-image: url('./images/home/desktop/pattern-circles.svg');
   background-repeat: no-repeat;
   background-position: -15rem -4rem;
   margin-bottom: 4.8rem;
@@ -349,7 +345,7 @@ button {
 
 //speaker zx7
 .speaker-zx7 {
-  background: url("./images/home/desktop/image-speaker-zx7.jpg") no-repeat;
+  background: url('./images/home/desktop/image-speaker-zx7.jpg') no-repeat;
   border-radius: 8px;
   margin-bottom: 4.8rem;
 
@@ -380,14 +376,13 @@ button {
     border-radius: 8px;
     padding: 10.1rem 9.5rem;
     background: $lightGray;
-
   }
 }
 
 //BRINGING
 .bringing {
   margin-bottom: 16rem;
-  
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -402,7 +397,7 @@ button {
   }
 }
 
-//FOOTER 
+//FOOTER
 .footer {
   background-color: $secondary;
   padding-top: 7.5rem;
@@ -421,7 +416,7 @@ button {
 
   &__text {
     color: $white;
-    opacity: .5;
+    opacity: 0.5;
     max-width: 54rem;
   }
 
@@ -432,13 +427,11 @@ button {
 
   &__copy {
     color: $white;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
 // HEADPHONESSCREEN
-
-
 
 //CARD
 
@@ -472,7 +465,6 @@ button {
   &__img {
     // width: 540px;
   }
-  
 
   //product details
   &__description-details {
@@ -490,9 +482,8 @@ button {
 
   &__wrapper-input--cart {
     width: 9.6rem;
-
   }
-  
+
   &__value-details {
     outline: none;
     background-color: $lightGray;
@@ -505,12 +496,11 @@ button {
     font-weight: $bold;
   }
 
-  
-
-  &__plus-details, &__minus-details {
+  &__plus-details,
+  &__minus-details {
     position: absolute;
     border: none;
-    
+
     font-size: 1.3rem;
   }
 
@@ -526,7 +516,6 @@ button {
     top: 0;
     bottom: 0;
     padding-left: 2rem;
-
   }
 
   &__button {
@@ -540,14 +529,11 @@ button {
   &__container {
     justify-content: space-between;
     gap: 5rem;
-
   }
-  
+
   &__description {
     max-width: 63rem;
-
   }
-  
 
   &__title {
     padding-bottom: 3.2rem;
@@ -557,7 +543,7 @@ button {
     color: $black;
     opacity: 0.5;
   }
-  
+
   &__item {
     margin-left: 2.4rem;
   }
@@ -571,7 +557,8 @@ button {
 .gallery {
   margin-bottom: 16rem;
 
-  &__container, &__two-gallery {
+  &__container,
+  &__two-gallery {
     justify-content: space-between;
   }
 
@@ -583,8 +570,6 @@ button {
   &__img {
     border-radius: 8px;
   }
-
-  
 }
 
 //Also
@@ -601,7 +586,6 @@ button {
   }
   &__title {
     padding-bottom: 3.2rem;
-
   }
   &__container {
     text-align: center;
@@ -612,46 +596,47 @@ button {
   }
 }
 
-.cart { 
+.cart {
   position: absolute;
   padding: 3.1rem;
   top: 15%;
   right: 10em;
-    width: 440px;
-    background-color: white;
+  width: 440px;
+  background-color: white;
+  border-radius: 8px;
+
+  &__info {
+    margin-bottom: 3.2rem;
+  }
+
+  &__container {
+    max-height: 300px;
+    overflow: auto;
+    margin-bottom: 3.2rem;
+  }
+
+  &__product {
+    margin-bottom: 2.4rem;
+  }
+
+  &__img {
+    width: 64px;
+    height: 64px;
     border-radius: 8px;
+    margin-right: 1.6rem;
+  }
 
-    &__info {
-      margin-bottom: 3.2rem;
-    }
-
-    &__container {
-      max-height: 300px;
-      overflow: auto;
-      margin-bottom: 3.2rem;
-    }
-
-    &__product {
-      margin-bottom: 2.4rem;
-    }
-
-    &__img {
-      width: 64px;
-      height: 64px;
-      border-radius: 8px;
-      margin-right: 1.6rem;
-
-    }
-
-    &__remove {
-      text-decoration: underline rgba(0, 0, 0, .2);
-      
-    }
+  &__remove {
+    text-decoration: underline rgba(0, 0, 0, 0.2);
+  }
 }
 
 //CHECKOUTSCREEN
 .checkout-summary {
   align-items: flex-start;
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 10px;
 }
 .checkout {
   max-width: 730px;
@@ -669,6 +654,7 @@ button {
   }
 
   &__form-group {
+    position: relative;
     display: flex;
     flex-flow: column;
     width: 30.9rem;
@@ -678,26 +664,41 @@ button {
     gap: 1.6rem;
   }
   &__form-group-full {
+    position: relative;
     display: flex;
     flex-flow: column;
     padding-bottom: 2.4rem;
-
   }
 
-    &__method {
-      display: flex;
-      align-items: center;
-      gap: 2.1rem;
-      border: 1px solid #CFCFCF;
-      border-radius: 8px;
-      padding: 2rem 2.4rem;
-      width: 30.9rem;
-      margin-bottom: 1.6rem;
+  &__method {
+    display: flex;
+    align-items: center;
+    gap: 2.1rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    padding: 2rem 2.4rem;
+    width: 30.9rem;
+    margin-bottom: 1.6rem;
+  }
+  &__method:focus-within {
+    border: 1px solid $primary;
+  }
 
-    }
-    &__method:focus-within {
-      border: 1px solid $primary;
-    }
+  &__form-error {
+    border-color: #cd2c2c;
+  }
+  &__label-error {
+    color: #cd2c2c;
+  }
+}
+
+[data-error]::after {
+  content: attr(data-error);
+  color: #cd2c2c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
 }
 
 .summary {
@@ -707,7 +708,7 @@ button {
   padding: 3.2rem 3.3rem;
 
   &__prices {
-    gap: .8rem;
+    gap: 0.8rem;
   }
 }
 
@@ -722,7 +723,7 @@ input[type='radio']:after {
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid #CFCFCF;
+  border: 2px solid #cfcfcf;
 }
 
 input[type='radio']:checked:after {
@@ -736,19 +737,21 @@ input[type='radio']:checked:after {
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid #CFCFCF;
+  border: 2px solid #cfcfcf;
 }
 
 //modal checkout
-.modal-checkout {    
+.modal-checkout {
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 400px;
   height: 400px;
   background: $white;
   border-radius: 8px;
-
 }
 
 @import './media-tablet.scss';

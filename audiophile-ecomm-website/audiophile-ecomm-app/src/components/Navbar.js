@@ -166,8 +166,7 @@ export default function Navbar() {
             className="btn btn-primary btn-primary--checkout"
             to="/checkout"
           >
-            {' '}
-            checkout{' '}
+            checkout
           </Link>
         </div>
       </Modal>

@@ -124,7 +124,7 @@ img {
 input {
   border-radius: 8px;
   padding: 2rem 2.4rem;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
   outline-color: #d87d4a;
 }
 
@@ -230,6 +230,10 @@ button {
 }
 .btn-black:hover {
   background: #4c4c4c;
+}
+
+.btn-disabled {
+  background-color: grey;
 }
 
 .btn-outline {
@@ -601,6 +605,9 @@ button {
 
 .checkout-summary {
   align-items: flex-start;
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 10px;
 }
 
 .checkout {
@@ -617,6 +624,7 @@ button {
   padding-bottom: 1.6rem;
 }
 .checkout__form-group {
+  position: relative;
   display: flex;
   flex-flow: column;
   width: 30.9rem;
@@ -626,6 +634,7 @@ button {
   gap: 1.6rem;
 }
 .checkout__form-group-full {
+  position: relative;
   display: flex;
   flex-flow: column;
   padding-bottom: 2.4rem;
@@ -634,7 +643,7 @@ button {
   display: flex;
   align-items: center;
   gap: 2.1rem;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
   border-radius: 8px;
   padding: 2rem 2.4rem;
   width: 30.9rem;
@@ -642,6 +651,21 @@ button {
 }
 .checkout__method:focus-within {
   border: 1px solid #d87d4a;
+}
+.checkout__form-error {
+  border-color: #cd2c2c;
+}
+.checkout__label-error {
+  color: #cd2c2c;
+}
+
+[data-error]::after {
+  content: attr(data-error);
+  color: #cd2c2c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
 }
 
 .summary {
@@ -665,7 +689,7 @@ input[type=radio]:after {
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 2px solid #CFCFCF;
+  border: 2px solid #cfcfcf;
 }
 
 input[type=radio]:checked:after {
@@ -679,7 +703,7 @@ input[type=radio]:checked:after {
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 2px solid #CFCFCF;
+  border: 2px solid #cfcfcf;
 }
 
 .modal-checkout {
